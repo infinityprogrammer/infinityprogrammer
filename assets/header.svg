@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Muhammed RAFI — Software Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0A1A"/>
+      <stop offset="1" stop-color="#0A1420"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7F5AF0"/>
+      <stop offset="0.55" stop-color="#4F8CFF"/>
+      <stop offset="1" stop-color="#00D4FF"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7F5AF0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7F5AF0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00D4FF" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity="0.07"/>
+    </pattern>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="340" rx="24"/></clipPath>
+  </defs>
+
+  <style>
+    .name  { font: 800 64px 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; letter-spacing: 2px; }
+    .role  { font: 500 24px 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif; fill: #C9D1D9; }
+    .meta  { font: 600 15px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; fill: #8B949E; letter-spacing: 3px; }
+    .chip  { font: 600 14px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; fill: #E6EDF3; }
+    .rise  { opacity: 0; animation: rise 1s cubic-bezier(.2,.7,.2,1) forwards; }
+    .d1 { animation-delay: .15s } .d2 { animation-delay: .35s } .d3 { animation-delay: .55s } .d4 { animation-delay: .75s }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: translateY(0) } }
+    .trail { stroke-dasharray: 22 78; animation: run 3.2s linear infinite; }
+    .trail2 { stroke-dasharray: 6 94; animation: run 3.2s linear infinite; animation-delay: -1.6s; }
+    @keyframes run { from { stroke-dashoffset: 100 } to { stroke-dashoffset: 0 } }
+    .pulse { animation: pulse 3.2s ease-in-out infinite; transform-origin: 230px 170px; }
+    @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+    .blink { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#dots)"/>
+    <circle cx="230" cy="170" r="230" fill="url(#glowA)" class="pulse"/>
+    <circle cx="1080" cy="40" r="260" fill="url(#glowB)"/>
+
+    <!-- ∞ infinity mark -->
+    <g transform="translate(230 170)">
+      <path id="inf" d="M0 0 C 40 -70 130 -70 130 0 C 130 70 40 70 0 0 C -40 -70 -130 -70 -130 0 C -130 70 -40 70 0 0 Z"
+            fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="14" stroke-linecap="round"/>
+      <path d="M0 0 C 40 -70 130 -70 130 0 C 130 70 40 70 0 0 C -40 -70 -130 -70 -130 0 C -130 70 -40 70 0 0 Z"
+            pathLength="100" fill="none" stroke="url(#brand)" stroke-width="14" stroke-linecap="round" class="trail" filter="url(#blur)"/>
+      <path d="M0 0 C 40 -70 130 -70 130 0 C 130 70 40 70 0 0 C -40 -70 -130 -70 -130 0 C -130 70 -40 70 0 0 Z"
+            pathLength="100" fill="none" stroke="url(#brand)" stroke-width="10" stroke-linecap="round" class="trail"/>
+      <path d="M0 0 C 40 -70 130 -70 130 0 C 130 70 40 70 0 0 C -40 -70 -130 -70 -130 0 C -130 70 -40 70 0 0 Z"
+            pathLength="100" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" class="trail2"/>
+    </g>
+
+    <!-- text block -->
+    <g transform="translate(440 0)">
+      <text x="0" y="104" class="meta rise d1">&lt;/&gt; INFINITYPROGRAMMER · DUBAI, UAE</text>
+      <text x="-3" y="180" class="name rise d2" fill="url(#brand)">MUHAMMED RAFI</text>
+      <text x="0" y="222" class="role rise d3">Software Engineer · Python, Frappe &amp; ERPNext</text>
+
+      <g transform="translate(0 252)"><g class="rise d4">
+        <rect width="128" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.06" stroke="#7F5AF0" stroke-opacity="0.6"/>
+        <text x="64" y="22" text-anchor="middle" class="chip">ERP Systems</text>
+        <rect x="140" width="112" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.06" stroke="#4F8CFF" stroke-opacity="0.6"/>
+        <text x="196" y="22" text-anchor="middle" class="chip">Web Apps</text>
+        <rect x="264" width="112" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.06" stroke="#00D4FF" stroke-opacity="0.6"/>
+        <text x="320" y="22" text-anchor="middle" class="chip">AI Agents</text>
+        <text x="392" y="23" class="chip blink" fill="#00D4FF">▍</text>
+      </g></g>
+    </g>
+
+    <rect x="1" y="1" width="1198" height="338" rx="23" fill="none" stroke="url(#brand)" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+</svg>
